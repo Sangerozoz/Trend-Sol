@@ -40,3 +40,6 @@ coverage/
 # ============ Tool / connector local data (not source) ============
 .workbuddy/
 .mastergo/
+
+# ============ Generated artifact output ============
+outputs/
