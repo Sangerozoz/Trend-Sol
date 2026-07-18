@@ -1,0 +1,42 @@
+# ============ Dependencies ============
+node_modules/
+.pnpm-store/
+
+# ============ Rust / Tauri build artifacts ============
+**/target/
+src-tauri/target/
+apps/*/src-tauri/target/
+src-tauri/gen/
+apps/*/src-tauri/gen/
+
+# ============ Build output ============
+dist/
+**/dist/
+out/
+*.tsbuildinfo
+
+# ============ Env / secrets ============
+.env
+.env.*
+*.local
+
+# ============ Logs ============
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# ============ Editor / OS ============
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============ Coverage / temp ============
+coverage/
+.temp/
+
+# ============ Tool / connector local data (not source) ============
+.workbuddy/
+.mastergo/

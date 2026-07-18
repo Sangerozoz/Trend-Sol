@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app-window</title>
+    <style>
+      *,*::before,*::after { box-sizing: border-box }
+      body { padding: 0; margin: 0 }
+      p { margin: 0 }
+    </style>
+  </head>
+  <body>
+<div
+  data-node-id="4:3898"
+  data-name="app-window"
+  style="width: 1200px; height: 1480px; min-height: 1480px; display: flex; justify-content: flex-start; align-items: flex-start; background: #000000; overflow: hidden">
+  <div
+    data-node-id="4:3904"
+    data-name="side-nav"
+    style="width: 56px; height: 1480px; display: flex; flex: none; justify-content: flex-start; align-items: center; flex-direction: column; gap: 16px; padding-top: 24px; padding-bottom: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-top-width: 0px; border-bottom-width: 0px; border-right-width: 1px; border-left-width: 0px">
+    <div
+      data-node-id="4:3910"
+      data-name="nav-item-active"
+      style="width: 44px; height: 48px; display: flex; flex: none; justify-content: center; align-items: center; flex-direction: column; gap: 8px; border-radius: 16px">
+      <img
+        src="./asset/icons/svg_78706ec5.svg"
+        data-node-id="4:01166"
+        data-name="股市_stock-market (1)"
+        style="width: 24px; height: 24px" />
+      <span
+        data-node-id="4:3916"
+        data-name="nav-label"
+        style="color: #FFFFFF; font-size: 10px; font-family: Inter; text-align: center; line-height: 12px">
+        行情
+      </span>
+    </div>
+    <div
+      data-node-id="4:3964"
+      data-name="nav-item"
+      style="width: 44px; height: 48px; display: flex; flex: none; justify-content: center; align-items: center; flex-direction: column; gap: 8px; border-radius: 16px">
+      <img
+        src="./asset/icons/svg_c18dc681.svg"
+        data-node-id="4:3374"
+        data-name="nav-icon"
+        style="width: 18px; height: 18px" />
+      <span
+        data-node-id="4:3970"
+        data-name="nav-label"
+        style="color: #666666; font-size: 10px; font-family: Inter; text-align: center; line-height: 12px">
+        自选股
+      </span>
+    </div>
+    <div
+      data-node-id="4:4016"
+      data-name="nav-item"
+      style="width: 44px; height: 48px; display: flex; flex: none; justify-content: center; align-items: center; flex-direction: column; gap: 8px; border-radius: 16px">
+      <img
+        src="./asset/icons/svg_f746d1e9.svg"
+        data-node-id="4:3378"
+        data-name="nav-icon"
+        style="width: 18px; height: 18px" />
+      <span
+        data-node-id="4:4023"
+        data-name="nav-label"
+        style="color: #666666; font-size: 10px; font-family: Inter; text-align: center; line-height: 12px">
+        订阅
+      </span>
+    </div>
+    <div
+      data-node-id="4:4070"
+      data-name="nav-item"
+      style="width: 44px; height: 48px; display: flex; flex: none; justify-content: center; align-items: center; flex-direction: column; gap: 8px; border-radius: 16px">
+      <img
+        src="./asset/icons/svg_5d924748.svg"
+        data-node-id="4:3382"
+        data-name="nav-icon"
+        style="width: 18px; height: 18px" />
+      <span
+        data-node-id="4:4076"
+        data-name="nav-label"
+        style="color: #666666; font-size: 10px; font-family: Inter; text-align: center; line-height: 12px">
+        我的
+      </span>
+    </div>
+  </div>
+  <div
+    data-node-id="4:4123"
+    data-name="main-area"
+    style="height: 1480px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+    <div
+      data-node-id="4:4125"
+      data-name="top-bar"
+      style="height: 48px; display: flex; align-self: stretch; justify-content: space-between; align-items: center; padding-right: 16px; padding-left: 16px; background: #0A0A0A; border-style: solid; border-color: #262626; border-top-width: 0px; border-bottom-width: 1px; border-right-width: 0px; border-left-width: 0px">
+      <div
+        data-node-id="4:11013"
+        data-name="容器 18269"
+        style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; gap: 16px">
+        <div
+          data-node-id="4:4131"
+          data-name="top-index"
+          style="display: flex; justify-content: flex-start; align-items: center; gap: 8px">
+          <span
+            data-node-id="4:4133"
+            data-name="idx-name"
+            style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+            上证
+          </span>
+          <span
+            data-node-id="4:4179"
+            data-name="idx-price"
+            style="color: #999999; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            3,218.45
+          </span>
+          <span
+            data-node-id="4:4217"
+            data-name="idx-chg"
+            style="color: #EF4444; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            +0.82%
+          </span>
+        </div>
+        <div
+          data-node-id="4:4257"
+          data-name="top-index"
+          style="display: flex; justify-content: flex-start; align-items: center; gap: 8px">
+          <span
+            data-node-id="4:4259"
+            data-name="idx-name"
+            style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+            深证
+          </span>
+          <span
+            data-node-id="4:4305"
+            data-name="idx-price"
+            style="color: #999999; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            10,412.33
+          </span>
+          <span
+            data-node-id="4:4343"
+            data-name="idx-chg"
+            style="color: #22C55E; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            -0.35%
+          </span>
+        </div>
+        <div
+          data-node-id="4:4383"
+          data-name="top-index"
+          style="display: flex; justify-content: flex-start; align-items: center; gap: 8px">
+          <span
+            data-node-id="4:4385"
+            data-name="idx-name"
+            style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+            创业板
+          </span>
+          <span
+            data-node-id="4:4431"
+            data-name="idx-price"
+            style="color: #999999; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            2,105.67
+          </span>
+          <span
+            data-node-id="4:4469"
+            data-name="idx-chg"
+            style="color: #EF4444; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+            +1.12%
+          </span>
+        </div>
+      </div>
+      <div
+        data-node-id="4:13927"
+        data-name="容器 18270"
+        style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 16px">
+        <div
+          data-node-id="4:4511"
+          data-name="search-box"
+          style="width: 240px; height: 32px; display: flex; flex: none; justify-content: flex-start; align-items: center; gap: 8px; padding-right: 12px; padding-left: 12px; background: rgba(255,255,255,0.05); border-style: solid; border-color: rgba(255,255,255,0.15); border-width: 1px; border-radius: 12px">
+          <div
+            data-node-id="4:13928"
+            data-name="Icon-wrapper"
+            style="width: 14px; height: 14px; flex: none; position: relative">
+            <div
+              data-node-id="4:13928/4:06025"
+              data-name="Icon / SearchOutlined"
+              style="position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+              <img src="./asset/icons/svg_b5c2c5b7.svg" />
+            </div>
+          </div>
+          <span
+            data-node-id="4:4523"
+            data-name="search-ph"
+            style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+            搜索股票
+          </span>
+        </div>
+        <div
+          data-node-id="4:14584"
+          data-name="按钮Button"
+          style="height: 32px; display: flex; justify-content: center; align-items: center; gap: 8px; padding-top: 2px; padding-bottom: 2px; padding-right: 12px; padding-left: 12px; background: rgba(255,255,255,0.1); border-radius: 256000px">
+          <img
+            data-node-id="4:01164"
+            data-name="image"
+            style="width: 24px; height: 24px; flex: none; object-fit: cover"
+            src="./asset/images/e5861f2faa89f9f6d5708f1c31e4493c.png"
+            title="image" />
+          <span
+            data-node-id="4:14587"
+            data-name="订阅"
+            style="color: #FFBB00; font-size: 14px; font-family: Douyin Sans; font-weight: 700; line-height: 20px">
+            订阅
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-node-id="4:4575"
+      data-name="page-content"
+      style="display: flex; align-self: stretch; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 24px; padding: 32px; background: linear-gradient(180deg, #0B1627 0%, #000000 21%, #000000 100%)">
+      <div
+        data-node-id="4:10076"
+        data-name="容器 18268"
+        style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; flex-direction: column; gap: 24px; padding-top: 24px; padding-bottom: 24px">
+        <div
+          data-node-id="4:05310"
+          data-name="tittle"
+          style="width: 768px; display: flex; flex: none; flex-shrink: 0; justify-content: center; align-items: center; flex-direction: column; gap: 16px; padding-top: 12px; padding-bottom: 12px">
+          <span
+            data-node-id="4:05323"
+            data-name="Trend Sol"
+            style="color: #E8E8E8; font-size: 30px; font-family: DingTalk JinBuTi; line-height: 38px">
+            Trend Sol
+          </span>
+        </div>
+        <div
+          data-node-id="4:09370"
+          data-name="默认"
+          style="width: 768px; display: flex; flex: none; flex-shrink: 0; justify-content: flex-start; align-items: center; flex-direction: column; background: rgba(255,255,255,0.05); border-style: solid; border-color: rgba(255,255,255,0.15); border-width: 1px; border-radius: 24px; backdrop-filter: blur(30px), 0px 4px 16px 0px rgba(96,12,242,0.06)">
+          <div
+            data-node-id="4:09370/4:09330"
+            data-name="容器 18216"
+            style="display: flex; align-self: stretch; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+            <div
+              data-node-id="4:09370/4:09349"
+              data-name="输入框/输入框"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding-top: 12px; padding-bottom: 12px; padding-right: 16px; padding-left: 16px; border-radius: 16px">
+              <div
+                data-node-id="4:09370/4:09349/4:08988"
+                data-name="容器 18231"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; gap: 16px">
+                <div
+                  data-node-id="4:09370/4:09349/4:08989"
+                  data-name="XClaw 跨境电商"
+                  style="flex: 1; color: #666666; font-size: 13px; font-family: PingFang SC; line-height: 21px">
+                  可以问问我茅台走势
+                </div>
+              </div>
+            </div>
+            <div
+              data-node-id="4:09370/4:09331"
+              data-name="输入框/工具栏"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center; padding-top: 8px; padding-bottom: 12px; padding-right: 16px; padding-left: 16px">
+              <div
+                data-node-id="4:09370/4:09331/4:09179"
+                data-name="附件技能"
+                style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 16px">
+                <div
+                  data-node-id="4:11006"
+                  data-name="输入框/语音按钮"
+                  style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; background: rgba(255,255,255,0.15); border-radius: 256000px">
+                  <div
+                    data-node-id="4:11006/4:06077"
+                    data-name="Icon-wrapper"
+                    style="width: 16px; height: 16px; flex: none; position: relative">
+                    <div
+                      data-node-id="4:11006/4:06077/4:05834"
+                      data-name="Icon / PlusOutlined"
+                      style="position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+                      <img src="./asset/icons/svg_a52d3365.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-node-id="4:09370/4:09331/4:09189"
+                data-name="按钮模型"
+                style="display: flex; flex-shrink: 0; justify-content: flex-end; align-items: center; gap: 16px">
+                <div
+                  data-node-id="4:09404"
+                  data-name="输入框/功能按钮"
+                  style="height: 32px; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 8px; padding-right: 12px; padding-left: 12px; background: rgba(255,255,255,0.1); border-radius: 16px">
+                  <div
+                    data-node-id="4:09404/4:06496"
+                    data-name="Content"
+                    style="height: 24px; display: flex; justify-content: center; align-items: center; gap: 4px">
+                    <div
+                      data-node-id="4:09404/4:06505"
+                      data-name="Icon-wrapper"
+                      style="width: 16px; height: 16px; flex: none; position: relative">
+                      <div
+                        data-node-id="4:09404/4:06505/4:06021"
+                        data-name="Icon2/ic_appliaction"
+                        style="width: 16px; height: 16px; flex: none; position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+                        <div
+                          data-node-id="4:09404/4:06505/4:06021/4:05756"
+                          data-name="联集 63"
+                          style="position: absolute; left: 10.31%; right: 10.31%; top: 4.5%; bottom: 4.5%; z-index: 1">
+                          <img src="./asset/icons/svg_88e67916.svg" />
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      data-node-id="4:09404/4:06501"
+                      data-name="技能"
+                      style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; line-height: 20px">
+                      Deepseek V4
+                    </span>
+                    <div
+                      data-node-id="4:09404/4:06500"
+                      data-name="Icon-wrapper"
+                      style="width: 10px; height: 10px; flex: none; position: relative">
+                      <div
+                        data-node-id="4:09404/4:06500/4:06005"
+                        data-name="Icon / DownOutlined"
+                        style="position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+                        <img src="./asset/icons/svg_dd1c0fca.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-node-id="4:09403"
+                  data-name="输入框/语音按钮"
+                  style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; background: rgba(255,255,255,0.15); border-radius: 256000px">
+                  <div
+                    data-node-id="4:09403/4:06077"
+                    data-name="Icon-wrapper"
+                    style="width: 16px; height: 16px; flex: none; position: relative">
+                    <div
+                      data-node-id="4:09403/4:06077/4:05834"
+                      data-name="Icon / AudioOutlined"
+                      style="position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+                      <img src="./asset/icons/svg_14abe9f2.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-node-id="4:09402"
+                  data-name="输入框/发送按钮"
+                  style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; background: rgba(255,255,255,0.15); border-radius: 256000px">
+                  <div
+                    data-node-id="4:09402/4:06098"
+                    data-name="Icon-wrapper"
+                    style="width: 16px; height: 16px; flex: none; position: relative">
+                    <div
+                      data-node-id="4:09402/4:06098/4:05834"
+                      data-name="Icon2/ic_Publish_filled"
+                      style="width: 16px; height: 16px; flex: none; position: absolute; left: 0%; right: 0%; top: 0%; bottom: 0%; z-index: 0">
+                      <div
+                        data-node-id="4:09402/4:06098/4:05834/4:05487"
+                        data-name="减去顶层 3"
+                        style="position: absolute; left: 4.19%; right: 11.5%; top: 8.31%; bottom: 8.31%; z-index: 1">
+                        <img src="./asset/icons/svg_3f34ffaf.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-node-id="4:4577"
+        data-name="overview-columns"
+        style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; gap: 24px">
+        <div
+          data-node-id="4:4579"
+          data-name="left-col"
+          style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 24px">
+          <div
+            data-node-id="4:4581"
+            data-name="module-overview"
+            style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:4583"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:4585"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                大盘概览
+              </span>
+            </div>
+            <div
+              data-node-id="4:4633"
+              data-name="overview-card"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 24px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:4641"
+                data-name="ashare-row"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; gap: 12px">
+                <div
+                  data-node-id="4:4643"
+                  data-name="index-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding: 16px; background: #161616; border-radius: 16px">
+                  <span
+                    data-node-id="4:4647"
+                    data-name="idx-name"
+                    style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                    上证指数
+                  </span>
+                  <span
+                    data-node-id="4:4691"
+                    data-name="idx-price"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px">
+                    3,218.45
+                  </span>
+                  <span
+                    data-node-id="4:4730"
+                    data-name="idx-chg"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 12px; font-family: Inter; line-height: 16px">
+                    +0.82%
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:4770"
+                  data-name="index-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding: 16px; background: #161616; border-radius: 16px">
+                  <span
+                    data-node-id="4:4774"
+                    data-name="idx-name"
+                    style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                    深证成指
+                  </span>
+                  <span
+                    data-node-id="4:4818"
+                    data-name="idx-price"
+                    style="flex-shrink: 0; color: #22C55E; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px">
+                    10,412.33
+                  </span>
+                  <span
+                    data-node-id="4:4857"
+                    data-name="idx-chg"
+                    style="flex-shrink: 0; color: #22C55E; font-size: 12px; font-family: Inter; line-height: 16px">
+                    -0.35%
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:4897"
+                  data-name="index-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding: 16px; background: #161616; border-radius: 16px">
+                  <span
+                    data-node-id="4:4901"
+                    data-name="idx-name"
+                    style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                    创业板指
+                  </span>
+                  <span
+                    data-node-id="4:4945"
+                    data-name="idx-price"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px">
+                    2,105.67
+                  </span>
+                  <span
+                    data-node-id="4:4984"
+                    data-name="idx-chg"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 12px; font-family: Inter; line-height: 16px">
+                    +1.12%
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:5024"
+                  data-name="index-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding: 16px; background: #161616; border-radius: 16px">
+                  <span
+                    data-node-id="4:5028"
+                    data-name="idx-name"
+                    style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                    沪深300
+                  </span>
+                  <span
+                    data-node-id="4:5071"
+                    data-name="idx-price"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px">
+                    3,872.10
+                  </span>
+                  <span
+                    data-node-id="4:5112"
+                    data-name="idx-chg"
+                    style="flex-shrink: 0; color: #EF4444; font-size: 12px; font-family: Inter; line-height: 16px">
+                    +0.45%
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:5150"
+                  data-name="index-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px; padding: 16px; background: #161616; border-radius: 16px">
+                  <span
+                    data-node-id="4:5155"
+                    data-name="idx-name"
+                    style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                    科创50
+                  </span>
+                  <span
+                    data-node-id="4:5198"
+                    data-name="idx-price"
+                    style="flex-shrink: 0; color: #22C55E; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px">
+                    872.55
+                  </span>
+                  <span
+                    data-node-id="4:5237"
+                    data-name="idx-chg"
+                    style="flex-shrink: 0; color: #22C55E; font-size: 12px; font-family: Inter; line-height: 16px">
+                    -0.18%
+                  </span>
+                </div>
+              </div>
+              <div
+                data-node-id="4:03900"
+                data-name="other-markets"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px">
+                <div
+                  data-node-id="4:03950"
+                  data-name="other-row-1"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center">
+                  <div
+                    data-node-id="4:03967"
+                    data-name="market-cell-1"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03978"
+                      data-name="m-name-1"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03979"
+                        data-name="道琼斯"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        道琼斯
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03973"
+                      data-name="m-value-1"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03974"
+                        data-name="38,912.34"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        38,912.34
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03968"
+                      data-name="m-change-1"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03969"
+                        data-name="+0.45%"
+                        style="color: #EF4444; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        +0.45%
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-node-id="4:03983"
+                    data-name="market-cell-2"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03994"
+                      data-name="m-name-2"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03995"
+                        data-name="纳斯达克"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        纳斯达克
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03989"
+                      data-name="m-value-2"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03990"
+                        data-name="17,234.56"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        17,234.56
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03984"
+                      data-name="m-change-2"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03985"
+                        data-name="+0.78%"
+                        style="color: #EF4444; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        +0.78%
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-node-id="4:03951"
+                    data-name="market-cell-3"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03957"
+                      data-name="m-name-3"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03958"
+                        data-name="恒生指数"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        恒生指数
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03962"
+                      data-name="m-value-3"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03963"
+                        data-name="17,834.56"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        17,834.56
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03952"
+                      data-name="m-change-3"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03953"
+                        data-name="-0.32%"
+                        style="color: #22C55E; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        -0.32%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-node-id="4:03901"
+                  data-name="other-row-2"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center">
+                  <div
+                    data-node-id="4:03918"
+                    data-name="market-cell-4"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03924"
+                      data-name="m-name-4"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03925"
+                        data-name="日经225"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        日经225
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03929"
+                      data-name="m-value-4"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03930"
+                        data-name="38,900.12"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        38,900.12
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03919"
+                      data-name="m-change-4"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03920"
+                        data-name="+0.23%"
+                        style="color: #EF4444; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        +0.23%
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-node-id="4:03902"
+                    data-name="market-cell-5"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03903"
+                      data-name="m-name-5"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03904"
+                        data-name="韩国KOSPI"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        韩国KOSPI
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03913"
+                      data-name="m-value-5"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03914"
+                        data-name="2,689.45"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        2,689.45
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03908"
+                      data-name="m-change-5"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03909"
+                        data-name="-0.12%"
+                        style="color: #22C55E; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        -0.12%
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-node-id="4:03934"
+                    data-name="market-cell-6"
+                    style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                    <div
+                      data-node-id="4:03935"
+                      data-name="m-name-6"
+                      style="width: 72px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03936"
+                        data-name="标普500"
+                        style="color: #999999; font-size: 12px; font-family: PingFang SC; line-height: 16px">
+                        标普500
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03945"
+                      data-name="m-value-6"
+                      style="width: 64px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03946"
+                        data-name="5,234.56"
+                        style="color: #E8E8E8; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        5,234.56
+                      </span>
+                    </div>
+                    <div
+                      data-node-id="4:03940"
+                      data-name="m-change-6"
+                      style="width: 48px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <span
+                        data-node-id="4:03941"
+                        data-name="+0.34%"
+                        style="color: #EF4444; font-size: 12px; font-family: PingFang SC; text-align: right; line-height: 16px">
+                        +0.34%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-node-id="4:03655"
+                data-name="stat-cards"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; gap: 24px; padding-top: 24px; border-style: solid; border-color: #262626; border-top-width: 1px; border-bottom-width: 0px; border-right-width: 0px; border-left-width: 0px">
+                <div
+                  data-node-id="4:03699"
+                  data-name="turnover-card"
+                  style="display: flex; flex: 1; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px; background: #161616; border-radius: 16px">
+                  <div
+                    data-node-id="4:03700"
+                    data-name="turnover-header"
+                    style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center">
+                    <span
+                      data-node-id="4:03701"
+                      data-name="turnover-title"
+                      style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: PingFang SC; font-weight: 600; line-height: 20px">
+                      A股交易额
+                    </span>
+                  </div>
+                  <div
+                    data-node-id="4:03706"
+                    data-name="容器 5"
+                    style="width: 608px; display: flex; flex: none; flex-shrink: 0; justify-content: space-between; align-items: flex-end">
+                    <div
+                      data-node-id="4:03711"
+                      data-name="容器 6"
+                      style="display: flex; justify-content: center; align-items: flex-end; gap: 16px">
+                      <div
+                        data-node-id="4:03712"
+                        data-name="容器 3"
+                        style="display: flex; justify-content: flex-start; align-items: flex-end; gap: 8px">
+                        <span
+                          data-node-id="4:03713"
+                          data-name="turnover-value"
+                          style="color: #E8E8E8; font-size: 32px; font-family: PingFang SC; font-weight: 600; line-height: 32px">
+                          11,280
+                        </span>
+                        <span
+                          data-node-id="4:03717"
+                          data-name="turnover-unit"
+                          style="color: #999999; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          亿元
+                        </span>
+                      </div>
+                      <div
+                        data-node-id="7:0978"
+                        data-name="容器 18271"
+                        style="display: flex; justify-content: flex-start; align-items: center; gap: 8px">
+                        <span
+                          data-node-id="7:0992"
+                          data-name="turnover-delta"
+                          style="color: #EF4444; font-size: 14px; font-family: PingFang SC; line-height: 16px">
+                          较昨日 +5.2%
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      data-node-id="7:1080"
+                      data-name="容器 18273"
+                      style="display: flex; justify-content: flex-start; align-items: flex-start; flex-direction: column">
+                      <div
+                        data-node-id="7:0878"
+                        data-name="容器 6"
+                        style="display: flex; justify-content: flex-start; align-items: flex-end; gap: 8px">
+                        <span
+                          data-node-id="7:0883"
+                          data-name="turnover-unit"
+                          style="color: #999999; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          大盘资金净流入
+                        </span>
+                        <span
+                          data-node-id="7:0879"
+                          data-name="turnover-unit"
+                          style="color: #EF4444; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          +10亿元
+                        </span>
+                      </div>
+                      <div
+                        data-node-id="7:1090"
+                        data-name="容器 4"
+                        style="display: flex; justify-content: flex-start; align-items: flex-end; gap: 8px">
+                        <span
+                          data-node-id="7:1099"
+                          data-name="turnover-unit"
+                          style="color: #999999; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          昨日成交额
+                        </span>
+                        <span
+                          data-node-id="7:1095"
+                          data-name="turnover-unit"
+                          style="color: #999999; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          10,000
+                        </span>
+                        <span
+                          data-node-id="7:1091"
+                          data-name="turnover-unit"
+                          style="color: #999999; font-size: 14px; font-family: PingFang SC; line-height: 20px">
+                          亿元
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-node-id="4:03744"
+                    data-name="turnover-chart"
+                    style="height: 72px; display: flex; align-self: stretch; justify-content: flex-start; align-items: flex-end; gap: 2px">
+                    <div
+                      data-node-id="4:03745"
+                      data-name="bar-1"
+                      style="height: 27px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03762"
+                      data-name="bar-2"
+                      style="height: 40px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03752"
+                      data-name="bar-3"
+                      style="height: 34px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03759"
+                      data-name="bar-4"
+                      style="height: 46px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03755"
+                      data-name="bar-5"
+                      style="height: 37px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03757"
+                      data-name="bar-6"
+                      style="height: 52px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03764"
+                      data-name="bar-7"
+                      style="height: 43px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03749"
+                      data-name="bar-8"
+                      style="height: 30px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03746"
+                      data-name="bar-9"
+                      style="height: 49px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03753"
+                      data-name="bar-10"
+                      style="height: 55px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03747"
+                      data-name="bar-11"
+                      style="height: 61px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03748"
+                      data-name="bar-12"
+                      style="height: 46px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03761"
+                      data-name="bar-13"
+                      style="height: 40px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03751"
+                      data-name="bar-14"
+                      style="height: 60px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03758"
+                      data-name="bar-15"
+                      style="height: 66px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03754"
+                      data-name="bar-16"
+                      style="height: 52px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03756"
+                      data-name="bar-17"
+                      style="height: 43px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03763"
+                      data-name="bar-18"
+                      style="height: 67px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03750"
+                      data-name="bar-19"
+                      style="height: 55px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                    <div
+                      data-node-id="4:03760"
+                      data-name="bar-20"
+                      style="height: 72px; display: flex; flex: 1; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #3B82F6; border-radius: 2px"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-node-id="4:6551"
+            data-name="module-hot"
+            style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:6554"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:6556"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                热门
+              </span>
+            </div>
+            <div
+              data-node-id="4:6656"
+              data-name="placeholder-card"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:6665"
+                data-name="tag"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center">
+                <div
+                  data-node-id="4:6667"
+                  data-name="tag-text"
+                  style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; padding-left: 12px; background: #161616; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 999px">
+                  <span
+                    data-node-id="4:6675"
+                    data-name="即将上线"
+                    style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                    即将上线
+                  </span>
+                </div>
+              </div>
+              <div
+                data-node-id="4:6720"
+                data-name="item-list"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px">
+                <div
+                  data-node-id="4:6723"
+                  data-name="item"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                  <div
+                    data-node-id="4:6725"
+                    data-name="dot"
+                    style="width: 4px; height: 4px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #666666; border-radius: 999px">
+                    <span
+                      data-node-id="4:6729"
+                      data-name="文字"
+                      style="color: #9E9E9E; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px"></span>
+                  </div>
+                  <span
+                    data-node-id="4:6738"
+                    data-name="item-text"
+                    style="flex-shrink: 0; color: #999999; font-size: 14px; font-family: Inter; line-height: 20px">
+                    热门板块题材（行业/概念人气榜）
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:6807"
+                  data-name="item"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                  <div
+                    data-node-id="4:6809"
+                    data-name="dot"
+                    style="width: 4px; height: 4px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #666666; border-radius: 999px">
+                    <span
+                      data-node-id="4:6813"
+                      data-name="文字"
+                      style="color: #9E9E9E; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px"></span>
+                  </div>
+                  <span
+                    data-node-id="4:6822"
+                    data-name="item-text"
+                    style="flex-shrink: 0; color: #999999; font-size: 14px; font-family: Inter; line-height: 20px">
+                    热门个股（人气榜 / 涨幅榜）
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-node-id="4:6891"
+            data-name="module-news"
+            style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:6893"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:6895"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                消息热点
+              </span>
+            </div>
+            <div
+              data-node-id="4:7022"
+              data-name="placeholder-card"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:7032"
+                data-name="tag"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center">
+                <div
+                  data-node-id="4:7034"
+                  data-name="tag-text"
+                  style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; padding-left: 12px; background: #161616; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 999px">
+                  <span
+                    data-node-id="4:7042"
+                    data-name="即将上线"
+                    style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                    即将上线
+                  </span>
+                </div>
+              </div>
+              <div
+                data-node-id="4:7087"
+                data-name="item-list"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 8px">
+                <div
+                  data-node-id="4:7090"
+                  data-name="item"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                  <div
+                    data-node-id="4:7092"
+                    data-name="dot"
+                    style="width: 4px; height: 4px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #666666; border-radius: 999px">
+                    <span
+                      data-node-id="4:7096"
+                      data-name="文字"
+                      style="color: #9E9E9E; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px"></span>
+                  </div>
+                  <span
+                    data-node-id="4:7106"
+                    data-name="item-text"
+                    style="flex-shrink: 0; color: #999999; font-size: 14px; font-family: Inter; line-height: 20px">
+                    盘中快讯 / 电报流
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:7155"
+                  data-name="item"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                  <div
+                    data-node-id="4:7158"
+                    data-name="dot"
+                    style="width: 4px; height: 4px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #666666; border-radius: 999px">
+                    <span
+                      data-node-id="4:7162"
+                      data-name="文字"
+                      style="color: #9E9E9E; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px"></span>
+                  </div>
+                  <span
+                    data-node-id="4:7172"
+                    data-name="item-text"
+                    style="flex-shrink: 0; color: #999999; font-size: 14px; font-family: Inter; line-height: 20px">
+                    按类型筛选（宏观 / 行业 / 公司）
+                  </span>
+                </div>
+                <div
+                  data-node-id="4:7245"
+                  data-name="item"
+                  style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center; gap: 8px">
+                  <div
+                    data-node-id="4:7248"
+                    data-name="dot"
+                    style="width: 4px; height: 4px; display: flex; flex: none; justify-content: flex-start; align-items: flex-start; flex-direction: column; background: #666666; border-radius: 999px">
+                    <span
+                      data-node-id="4:7252"
+                      data-name="文字"
+                      style="color: #9E9E9E; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px"></span>
+                  </div>
+                  <span
+                    data-node-id="4:7262"
+                    data-name="item-text"
+                    style="flex-shrink: 0; color: #999999; font-size: 14px; font-family: Inter; line-height: 20px">
+                    关键词标红
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-node-id="4:7305"
+          data-name="right-col"
+          style="width: 368px; display: flex; flex: none; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 24px">
+          <div
+            data-node-id="4:7308"
+            data-name="module-hold"
+            style="display: flex; align-self: stretch; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:7310"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:7312"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                持仓
+              </span>
+            </div>
+            <div
+              data-node-id="4:7360"
+              data-name="placeholder-btn"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 12px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:7368"
+                data-name="btn-head"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center">
+                <span
+                  data-node-id="4:7370"
+                  data-name="btn-title"
+                  style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                  持仓
+                </span>
+                <div
+                  data-node-id="4:7413"
+                  data-name="btn-tag"
+                  style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; padding-left: 12px; background: #161616; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 999px">
+                  <span
+                    data-node-id="4:7422"
+                    data-name="即将上线"
+                    style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                    即将上线
+                  </span>
+                </div>
+              </div>
+              <span
+                data-node-id="4:7467"
+                data-name="btn-desc"
+                style="flex-shrink: 0; color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                手动录入持仓后显示盈亏
+              </span>
+            </div>
+          </div>
+          <div
+            data-node-id="4:7515"
+            data-name="module-watch"
+            style="display: flex; align-self: stretch; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:7517"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:7519"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                自选
+              </span>
+              <span
+                data-node-id="4:7566"
+                data-name="view-all"
+                style="flex-shrink: 0; color: #3B82F6; font-size: 12px; font-family: Inter; text-align: right; line-height: 16px">
+                查看全部 →
+              </span>
+            </div>
+            <div
+              data-node-id="4:7612"
+              data-name="watch-card"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 12px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:7622"
+                data-name="watch-count"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: center">
+                <span
+                  data-node-id="4:7624"
+                  data-name="count-text"
+                  style="flex-shrink: 0; color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                  共 0 只
+                </span>
+              </div>
+              <div
+                data-node-id="4:7677"
+                data-name="watch-empty"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: center; align-items: center; flex-direction: column; gap: 8px; padding-top: 24px; padding-bottom: 24px">
+                <p
+                  data-node-id="4:7679"
+                  data-name="empty-text"
+                  style="align-self: stretch; flex-shrink: 0; color: #666666; font-size: 12px; font-family: Inter; text-align: center; line-height: 16px">
+                  暂无自选股，去搜索添加吧
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            data-node-id="4:7751"
+            data-name="module-monitor"
+            style="display: flex; align-self: stretch; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 16px">
+            <div
+              data-node-id="4:7753"
+              data-name="section-header"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-end; gap: 12px">
+              <span
+                data-node-id="4:7755"
+                data-name="section-title"
+                style="flex-shrink: 0; color: #E8E8E8; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px">
+                盯盘
+              </span>
+            </div>
+            <div
+              data-node-id="4:7802"
+              data-name="placeholder-btn"
+              style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; gap: 12px; padding: 24px; background: #0A0A0A; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 24px">
+              <div
+                data-node-id="4:7811"
+                data-name="btn-head"
+                style="display: flex; align-self: stretch; flex-shrink: 0; justify-content: space-between; align-items: center">
+                <span
+                  data-node-id="4:7813"
+                  data-name="btn-title"
+                  style="flex-shrink: 0; color: #E8E8E8; font-size: 14px; font-family: Inter; line-height: 20px">
+                  盯盘
+                </span>
+                <div
+                  data-node-id="4:7857"
+                  data-name="btn-tag"
+                  style="display: flex; flex-shrink: 0; justify-content: flex-start; align-items: flex-start; flex-direction: column; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; padding-left: 12px; background: #161616; border-style: solid; border-color: #262626; border-width: 1px; border-radius: 999px">
+                  <span
+                    data-node-id="4:7865"
+                    data-name="即将上线"
+                    style="color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                    即将上线
+                  </span>
+                </div>
+              </div>
+              <span
+                data-node-id="4:7912"
+                data-name="btn-desc"
+                style="flex-shrink: 0; color: #666666; font-size: 12px; font-family: Inter; line-height: 16px">
+                添加盯盘标的，异动提醒
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

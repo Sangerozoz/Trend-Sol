@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@trend-iq/data": ["../../packages/data/src/index.ts"],
+      "@trend-iq/chart": ["../../packages/chart/src/index.ts"],
+      "@trend-iq/indicators": ["../../packages/indicators/src/index.ts"],
+      "@trend-iq/store": ["../../packages/store/src/index.ts"],
+      "@trend-iq/ui": ["../../packages/ui/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

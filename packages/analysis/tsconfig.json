@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "paths": {
+      "@trend-iq/shared": ["../shared/src/index.ts"],
+      "@trend-iq/data": ["../data/src/index.ts"],
+      "@trend-iq/indicators": ["../indicators/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

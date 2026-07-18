@@ -1,0 +1,38 @@
+/*
+ * Arco Design 暗色主题覆写
+ * 把 Arco 暗色（arco-theme-dark）自带的中深灰背景压到「纯黑系」，
+ * 贴合 Trend IQ 的纯黑产品调性（bg-primary #000000 等）。
+ *
+ * 注意：本文件必须在 arco.css 之后引入（见 main.tsx），
+ * 才能用同优先级变量声明覆盖 Arco 默认值。
+ */
+
+.arco-theme-dark {
+  /* 背景层级：页面 -> 容器 -> 次级 -> 浮层 -> 最高浮层 */
+  --color-bg-1: #000000;
+  --color-bg-2: #0a0a0a;
+  --color-bg-3: #161616;
+  --color-bg-4: #1f1f1f;
+  --color-bg-5: #262626;
+
+  /* 填充（hover / active / striped） */
+  --color-fill-1: #0a0a0a;
+  --color-fill-2: #161616;
+  --color-fill-3: #1f1f1f;
+  --color-fill-4: #262626;
+
+  /* 边框 */
+  --color-border-1: #262626;
+  --color-border-2: #333333;
+  --color-border-3: #404040;
+  --color-border-4: #525252;
+
+  /* 文本 */
+  --color-text-1: #e8e8e8;
+  --color-text-2: #b0b0b0;
+  --color-text-3: #999999;
+  --color-text-4: #666666;
+
+  /* 强调色（与产品 accent #3b82f6 对齐） */
+  --primary-6: #3b82f6;
+}

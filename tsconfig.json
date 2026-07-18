@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@trend-iq/data": ["packages/data/src/index.ts"],
+      "@trend-iq/chart": ["packages/chart/src/index.ts"],
+      "@trend-iq/indicators": ["packages/indicators/src/index.ts"],
+      "@trend-iq/analysis": ["packages/analysis/src/index.ts"],
+      "@trend-iq/store": ["packages/store/src/index.ts"],
+      "@trend-iq/shared": ["packages/shared/src/index.ts"],
+      "@trend-iq/ui": ["packages/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "**/src-tauri/target"]
+}
