@@ -420,3 +420,23 @@
 - **2026-07-18（后续）**：用户给出详细意见——REQ-UI-13「队列只展示在 AI 诊股页、不在首页」、REQ-UI-14「置顶图标换官方 trendsol-icon/去顶部_to-top」。已整改（队列面板 `!isHome` 门控；`PinIcon`→官方 `ToTopIcon`），无头复测全过，两张卡回 👀 再交付验收。
 - 状态回写：cards 顶部状态行 + requirements.md 状态列 + 本文件各卡状态行同步更新。
 - 关联：REQ-UI-10/12/13/14、REQ-NAV-11/12。
+
+### 2026-07-18 — REQ-MKT-14 行情页大盘概览最小宽度 + 横向滚动（A股 横滑回归 + 其他市场兜底）
+- 需求：① 用户反馈 A股 指数卡片（上证/深证等）横滑丢失、疑似最小宽度被改掉；② 其他市场（美/港/日/韩）空间不足超出时需设定最小宽度值（用户不知取多少）；③ 总体：内容设最小宽度，窗口缩窄不再适配、超出底部横滑。
+- 事实澄清：查 `requirements.md`+git，**A股 横滑是已交付且验收功能**（REQ-MKT-02 2026-07-14「含 A股 横滑」、REQ-MKT-05 横滑容器 `overflow-x-auto overflow-y-hidden` 补丁）；当前 `OverviewPage.tsx` A股 行退化为 `flex gap-3`、卡片 `flex-1 min-w-0`，`min-w-0` 让卡片可缩到 0 → 既丢横滑又被无限挤压；属回归（非有意为之）。
+- 方案：`apps/desktop/src/pages/OverviewPage.tsx` —— ① A股 行 `flex gap-3`→`flex gap-3 overflow-x-auto overflow-y-hidden pb-2`，卡片 `flex-1 min-w-0`→`flex-1 min-w-[132px]`（恢复横滑+最小宽度兜底，宽窗 flex-1 仍铺满）；② 其他市场每行外包 `overflow-x-auto`、内层行 `flex justify-between items-center gap-6 min-w-max`（宽窗边到边、窄窗保持最小宽横滑），`OtherIndexCell` 外层 span 加 `min-w-[200px]`。
+- 最小宽度取值（基于内容实测，非拍脑袋）：A股 卡内 `p-4`(32)+价格 `text-xl`(20,semibold,tabular) 最长 "12345.67"≈90 → 取 **132px**（5×132+4×12=708，xl≥1280 左栏内宽≈747 内不横滑、窗口<~772px 才横滑，合理；可调 124–140）；其他单元格 名称72+数值64+涨跌48+2×8=**200px**（即现有三段固定宽之和，自然宽）。
+- 自测：tsc 0 新增错误（仅 ProfilePage 2 处预存）；`vite build` 成功，编译 CSS 命中 `min-width:132px/200px/max-content`、`overflow-x:auto`×3、`overflow-y:hidden`×3；dev 服务(HMR)源码含 `min-w-[132px]`。无头 Chrome 截图被 sandbox 杀(137)未附运行截图，横滑为标准 `overflow-x-auto+min-w` 机制、逻辑确定，按 REQ-MKT-13 同类 sandbox 限制待本机验收。
+- 状态：⬜→🔧→🧪→👀 待用户验收（闭环需用户拍板）。关联 REQ-MKT-02/05、DEC-008/009。
+
+### 2026-07-20 — REQ-MKT-15 整页最小宽度 + 横向滚动（以美港日韩自然宽为基准）
+- 需求：用户三点诉求 ①美港日韩 不隐藏、始终完整显示；②以其「未缩放时」自然宽作为整页 `min-width` 基准（非单元格 200px 等数值相加推断）；③禁止页面无限缩放，视口<min-width 出现整页底部横滑条而非继续缩小内容。
+- 方案：`apps/desktop/src/pages/OverviewPage.tsx` —— ① 根滚动容器 `h-full overflow-y-auto px-8 py-8` → `h-full overflow-auto`（去根 padding，允许双向滚动）；② 新增内层包裹 `div` `min-w-[760px] px-8 py-8`（宽屏块级 `auto` 撑满、窄屏锁 760 由根 `overflow-auto` 出整页横滑）；③ 美港日韩 行去 `overflow-x-auto` 外包与 `min-w-max` 内层、改 `flex justify-between items-center gap-6`，`OtherIndexCell` span 加 `shrink-0`（自然宽 3×200+2×24=648px 固定不压缩、始终完整）。
+- 最小宽度取值（实测）：美港日韩单行自然宽 = `3×200(单元格) + 2×24(gap-6) = 648px`；该区块位于「大盘概览」卡 `p-6`(48) + 页面 `px-8`(64) → `648+48+64 = 760px` 即整页 `min-width`（视口阈值）。视口≥760 正常铺满、美港日韩 边到边；<760 整页横滑、美港日韩 恒 648 完整不缩放。旁证：A股 行 5×132+4×12=708px<760 楼层下卡片内宽(648) → 仍走自身 `overflow-x-auto` 内部横滑（与 REQ-MKT-14 一致，用户未要求改 A股）。
+- 自测：tsc 0 新增错误（仅 ProfilePage 2 处预存、与本次无关）；`vite build` 成功，编译 CSS 命中 `min-width:760px`×1、`overflow:auto`×15(含根)、`overflow-x:auto`×3、`min-width:200px`×1、`min-width:132px`×1；dev 服务(HMR) 已应用。无头 Chrome 截图被 sandbox 杀(137)未附运行图，整页横滑为标准 `overflow-auto+min-w` 机制、逻辑确定，按 REQ-MKT-13/14 同类 sandbox 限制待本机验收。
+- 状态：⬜→📐→🔧→🧪→👀 待用户验收（闭环需用户拍板）。关联 REQ-MKT-02/05/14、DEC-008/009。
+
+### 2026-07-20 — REQ-MKT-14 / REQ-MKT-15 用户验收闭环
+- 两卡均经用户本机验收通过（2026-07-20），状态由 👀 待用户验收 → ✅ 已闭环；requirements.md 状态列已同步。
+- 布局目标全部达成：① A股 指数行 ~770px 以下行内横滑（修复 `min-w-0` 回归，恢复 REQ-MKT-02/05 已验收行为）；② 美港日韩 始终完整显示（`shrink-0` 锁死自然宽 648px，不压缩/不隐藏）；③ 整页 `min-width:760px`（以美港日韩未缩放自然宽 648 + 卡片 p-6(48) + 页面 px-8(64) 实测得出），视口 <760px 出整页底部横滑条，禁止无限缩放。
+- 自测留证：tsc 0 新增错误（仅 ProfilePage 预存 2 处）、vite build 成功且 CSS 工具类全命中（min-width:760px / 132px / 200px、overflow:auto 等）、dev 服务 HMR 已应用。无头截图受 sandbox 限制(exit 137)未附运行图，已用户本机确认。

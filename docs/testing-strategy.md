@@ -99,3 +99,25 @@
 3. `pnpm typecheck` 无新增错误。
 4. `localhost:1420` dev 预览仍正常（HTTP 200）。
 5. 新增文件已提交/可提交至 `Trend-Sol` 仓库。
+
+## 9. 落地进度（首批，2026-07-18）
+
+**已完成（🔧→🧪 自测通过）**
+- 根 `vitest.config.ts` + `package.json` devDeps（`vitest`/`@vitest/coverage-v8`/`jsdom`/`@testing-library/*`）+ `test`/`test:watch`/`test:cov` scripts。
+- 首批 4 个测试文件、30 个用例，**全绿**：
+  - `packages/analysis/src/__tests__/linear-regression.test.ts`（8）
+  - `packages/analysis/src/__tests__/extrema.test.ts`（6）
+  - `packages/analysis/src/__tests__/fibonacci.test.ts`（5）
+  - `apps/desktop/src/store/__tests__/chatStore.test.ts`（11，锁定 REQ-UI-13/14 队列行为）
+- 已提交 `09f61e3` 并推送至 `Trend-Sol` 远程 `main`。
+- 行覆盖：`chatStore.ts` 82%、`fibonacci` 100%、`linear-regression` 100%、`extrema` 93%。
+
+**验证结论**
+- `pnpm test`：30/30 通过；`pnpm test:cov`：覆盖率报告正常生成。
+- 新增测试文件**引入 0 个 type 错误**（`pnpm -r typecheck` 中无任何 `.test.ts` 报错）。
+- `localhost:1420` dev 预览仍 HTTP 200，未受影响。
+
+**遗留 / follow-up（非本次引入）**
+- `pnpm -r typecheck` 中 `packages/analysis` 失败：其 tsconfig 未含 DOM lib，而依赖的 `@trend-iq/data` 用了 `window`/`fetch`/`console` 等浏览器全局 → 预先存在的工具链配置缺口，**与测试无关**。后续归入工程卫生（Step 7）修正，需改 tsconfig（配置敏感，届时单独确认）。
+- 覆盖率整体偏低（28%）是因为 `patterns`/`support-resistance`/`trendline`/`pullback` 等模块尚未写测试；按路线图后续批次补，目标核心包 ≥80%。
+- `@testing-library/react` 等已装好但本批未用，留给组件测试批次。
