@@ -53,12 +53,15 @@ export function OverviewPage() {
     // page-content：padding 32px、gap 24px、顶部渐变背景（设计稿 linear-gradient 180deg #0B1627→#000）
     <div
       ref={rootRef}
-      className="h-full overflow-y-auto px-8 py-8 bg-bg-primary"
+      className="h-full overflow-auto bg-bg-primary"
       style={{
         background:
           "linear-gradient(180deg, #0B1627 0%, #000000 21%, #000000 100%)",
       }}
     >
+      {/* 整页最小宽度包裹：以美港日韩自然宽(648)为基准 + 卡片p-6(48) + 页面px-8(64) = 760px；
+          视口<760 时整页底部横滑(根 overflow-auto)，内容不再无限缩小（REQ-MKT-15） */}
+      <div className="min-w-[760px] px-8 py-8">
       {/* AI 对话入口：设计稿 容器18268（Trend Sol 标题 + 768px AI 输入框），位于顶栏与大盘概览之间 */}
       <div className="ov-anim flex flex-col items-center gap-6 py-6">
         <h1
@@ -79,21 +82,21 @@ export function OverviewPage() {
             <div className="bg-bg-secondary rounded-3xl border border-border-default p-6 space-y-6">
               {/* 大盘指数：结构由 MARKET_INDEX_DEFS 固定驱动，加载前后数量/位置不变 */}
               {/* A股一行排列（固定 5 张骨架，flex-1 均分，与设计稿 ashare-row 一致） */}
-              <div className="flex gap-3">
+              {/* A股 一行排列：空间不足时保持卡片最小宽度(132px)并横向滚动，不再无限挤压（恢复 REQ-MKT-02/05 横滑，min-w-0→min-w-[132px] 修复回归） */}
+              <div className="flex gap-3 overflow-x-auto overflow-y-hidden pb-2">
                 {aShareDefs.map((def) => (
-                  <div key={def.id} className="flex-1 min-w-0 ov-anim">
+                  <div key={def.id} className="flex-1 min-w-[132px] ov-anim">
                     <IndexCard def={def} idx={byCode.get(def.id)} loading={pulse} />
                   </div>
                 ))}
               </div>
 
-              {/* 其他市场：纯文字低调展示（固定 6 个槽，2 行 × 3 组，每行 space-between 边到边分布） */}
+              {/* 其他市场：纯文字低调展示（固定 6 个槽，2 行 × 3 组，每行 space-between 边到边分布）
+                  不再行内横滑：单元格 shrink-0 + min-w-[200px] 固定自然宽(648px)，始终完整显示；
+                  视口<760 由整页 min-w-[760px] 兜底出整页横滑（REQ-MKT-15） */}
               <div className="space-y-2">
                 {[0, 1].map((row) => (
-                  <div
-                    key={row}
-                    className="flex justify-between items-center"
-                  >
+                  <div key={row} className="flex justify-between items-center gap-6">
                     {otherDefs
                       .slice(row * 3, row * 3 + 3)
                       .map((def) => (
@@ -185,6 +188,7 @@ export function OverviewPage() {
           />
         </div>
       </div>
+      </div>
     </div>
   );
 }
@@ -260,7 +264,7 @@ function OtherIndexCell({
   return (
     /* 三列固定宽：名称(左对齐,72px) + 数值(右对齐,64px) + 涨跌(右对齐,48px)。
        gap 8px 与行内各市场成组；justify-between 使每行 3 组边到边分布，内容左右缘对齐上方 A股 卡片行 */
-    <span className="flex items-center gap-2 text-xs ov-anim">
+    <span className="flex items-center gap-2 text-xs ov-anim min-w-[200px] shrink-0">
       <span className="text-text-secondary w-[72px] text-left shrink-0 truncate">
         {def.name}
       </span>
